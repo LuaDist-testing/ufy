@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "ufy"
-version = "1.0.0-1"
+version = "1.1.0-1"
 -- LuaDist source
 source = {
-  tag = "1.0.0-1",
+  tag = "1.1.0-1",
   url = "git://github.com/LuaDist-testing/ufy.git"
 }
 -- Original source
 -- source = {
 --    url = "git+https://github.com/deepakjois/ufy.git",
---    tag = "v1.0.0"
+--    tag = "v1.1.0"
 -- }
 description = {
    summary = "Work in Progress",
@@ -27,7 +27,6 @@ build = {
    type = "builtin",
    modules = {
       ufy = "src/ufy/init.lua",
-      ["ufy.file_discovery"] = "src/ufy/file_discovery.lua",
       ["ufy.fonts"] = "src/ufy/fonts.lua",
       ["ufy.loader"] = "src/ufy/loader.lua"
    },

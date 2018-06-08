@@ -37,7 +37,15 @@ source lua52/bin/activate
 eval $(luarocks path)
 ```
 
-### Checkout and setup ufy
+## Install ufy
+
+#### From LuaRocks
+
+```
+luarocks install ufy
+```
+
+#### From source code
 
 The following commands install _ufy_ and make it available as an executable on PATH. If you encounter any problems, make sure you have followed the instructions above to install and activate Lua and LuaRocks in a sandbox first. File an issue if the problems persist.
 
@@ -45,12 +53,7 @@ The following commands install _ufy_ and make it available as an executable on P
 git clone https://github.com/deepakjois/ufy
 cd ufy
 luarocks make
-ufy --setup
 ```
-
-WARNING: _`ufy --setup` currently does not work for Windows, because the binaries are not available for download anywhere. You will have to compile and install your own copy of the LuaTeX binary into `%USERPROFILE%\.ufy`_
-
-Running `ufy --setup` as shown above will download the [LuaTeX binary] for your platform and copy it to `$HOME/.ufy/` (`%USERPROFILE%/.ufy` on Windows).
 
 [LuaTeX binary]:http://www.luatex.org/download.html
 
@@ -64,7 +67,7 @@ $ cd examples
 $ ufy hello.lua
 Checking if luatex is present…
 
-/home/deepak/.ufy/luatex --shell-escape --lua=/home/deepak/lua52/lib/luarocks/rocks/ufy/scm-1/config/ufy_pre_init.lua --jobname=bidi --ini '\catcode`\{=1' '\catcode`\}=2' '\directlua{ufy.init()}' '\directlua{dofile("bidi.lua")}' '\end'
+luatex --shell-escape --lua=/Users/deepak/code/personal/ufy-sandbox/lua52/lib/luarocks/rocks/ufy/scm-1/config/ufy_pre_init.lua --jobname=hello --ini '\catcode`\{=1' '\catcode`\}=2' '\directlua{ufy.init()}' '\directlua{dofile("hello.lua")}' '\end'
 
 This is LuaTeX, Version 1.0.0 (TeX Live 2017/dev)  (INITEX)
  system commands enabled.
